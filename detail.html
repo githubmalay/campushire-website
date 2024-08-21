@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Detail Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #d4d4d4;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: #d4d4d4;
+        }
+
+        .detail-card {
+            margin-top: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-card h3 {
+            color: #007bff;
+        }
+
+        .detail-card .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .detail-card .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="home.html">Campushire</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Campus Detail Section -->
+    <div class="container">
+        <div class="card detail-card">
+            <div class="card-body">
+                <h3 class="card-title">PHP Web Development</h3>
+                <p><strong>Description:</strong></p>
+                <p>2 - 7 years | Not Disclosed<br>
+                    Office<br>
+                    Job Title: coco cola<br>
+                    Location: Bengaluru<br>
+                    Job Type: Full Time</p>
+                <p><strong>Company:</strong> Travelopro</p>
+                <p><strong>Posted on:</strong> 2024-08-23</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#applyModal">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apply Modal -->
+    <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">Apply for PHP Web Development</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Resume (PDF)</label>
+                            <input type="file" class="form-control-file" id="resume" name="resume" accept=".pdf"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="coverLetter">Cover Letter</label>
+                            <textarea class="form-control" id="coverLetter" name="coverLetter" rows="4"></textarea>
+                        </div>
+                        <a href="detail.html"  type="submit" class="btn btn-primary">Submit Application</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="mb-0">&copy; 2024 Campushire. All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

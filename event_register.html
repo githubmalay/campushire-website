@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #4B0082;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: white;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #4b1e8c;
+        }
+
+        .navbar {
+            background-color: #4B0082;
+            color: white;
+            margin-left: 250px;
+            padding: 10px 20px;
+            position: fixed;
+            width: calc(100% - 250px);
+            z-index: 999;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-item .nav-link {
+            color: white;
+            font-size: 18px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 80px 20px 20px 20px;
+        }
+
+        .content h2 {
+            color: #4b0082;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn-success {
+            background-color: #4B0082;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #4b1e8c;
+            color: white;
+        }
+
+        .btn-danger {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .btn-danger:hover {
+            background-color: #a52931;
+        }
+
+        .table th {
+            background-color: #4B0082;
+            color: #fff;
+        }
+
+        .table td, .table th {
+            vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .navbar {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .table-responsive {
+                border: none;
+            }
+
+            .table thead {
+                display: none;
+            }
+
+            .table tr {
+                display: block;
+                margin-bottom: 15px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+
+            .table td {
+                display: block;
+                text-align: right;
+                font-size: 14px;
+                padding: 10px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .table td:last-child {
+                border-bottom: 0;
+            }
+
+            .table td:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3 class="mx-3 text-center">Admin Panel</h3>
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="user_management.html">User Management</a>
+        <a href="profile_management.html">Profile Management</a>
+        <a href="vacancies_management.html">Vacancies Management</a>
+        <a href="application_management.html">Applications Management</a>
+        <a href="event_management.html">Event Management</a>
+        <a href="event_register.html">Event Registration</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user"></i> Admin</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Manage Events</h2>
+        <button class="btn btn-success mb-3">Add New Event</button>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Event Title</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Event Title">Job Fair 2024</td>
+                        <td data-label="Name">meet</td>
+                        <td data-label="Email">meet66286@gmail.com</td>
+                        <td data-label="Mobile">01234567890</td>
+                        <td data-label="Actions"><button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Event Title">Tech Talk Series</td>
+                        <td data-label="Name">meet</td>
+                        <td data-label="Email">meet@Gmail.com</td>
+                        <td data-label="Mobile">01234567890</td>
+                        <td data-label="Actions"><button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

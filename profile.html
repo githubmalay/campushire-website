@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile View</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f1f4f8;
+        }
+
+        .bg-teal {
+            background-color: #007bff;
+        }
+
+        .navbar .nav-link {
+            color: #ffffff !important;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .btn-teal {
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-teal:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="home.html">Campushire</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="card mx-auto" style="max-width: 800px;">
+            <div class="card-body">
+                <div class="text-center">
+                    <h3 class="card-title">View Profile</h3>
+                    <img src="profile.jpg" alt="Profile Image" class="rounded-circle mt-3" width="120" height="120">
+                </div>
+                <h4 class="mt-4">Meet Ladola</h4>
+                <p><strong>Summary:</strong> I am a good frontend developer</p>
+                <p><strong>Experience:</strong> I have done a 1-month internship at Surat</p>
+                <p><strong>Skills:</strong> HTML, CSS, Bootstrap, PHP</p>
+                <p><strong>Certifications:</strong> HTML certificate</p>
+                <button type="button" class="btn btn-teal" data-toggle="modal" data-target="#editProfileModal">
+                    Edit Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="profileName">Name</label>
+                            <input type="text" class="form-control" id="profileName" value="Meet Ladola">
+                        </div>
+                        <div class="form-group">
+                            <label for="profileSummary">Summary</label>
+                            <textarea class="form-control" id="profileSummary" rows="3">I am a good frontend developer</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileExperience">Experience</label>
+                            <textarea class="form-control" id="profileExperience" rows="3">I have done a 1-month internship at Surat</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileSkills">Skills</label>
+                            <input type="text" class="form-control" id="profileSkills" value="HTML, CSS, Bootstrap, PHP">
+                        </div>
+                        <div class="form-group">
+                            <label for="profileCertifications">Certifications</label>
+                            <input type="text" class="form-control" id="profileCertifications" value="HTML certificate">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="profile.html" type="button" class="btn btn-teal">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

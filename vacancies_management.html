@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Vacancies Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #4B0082;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #4b1e8c;
+        }
+
+        .navbar {
+            background-color: #4B0082;
+            color: white;
+            padding: 10px 20px;
+            margin-left: 250px;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar .nav-item .nav-link {
+            color: white;
+            font-size: 18px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        .table thead th {
+            background-color: #4B0082;
+            color: white;
+            border-color: #4B0082;
+        }
+
+        .btn-view {
+            background-color: #4B0082;
+            color: white;
+        }
+
+        .btn-view:hover {
+            background-color: #4B0082;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: #4B0082;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .navbar {
+                margin-left: 0;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .table-responsive {
+                display: none;
+            }
+
+            .card-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .card {
+                background-color: white;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .card-title {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .card-content {
+                margin-top: 10px;
+            }
+
+            .btn-sm {
+                margin-right: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h3 class="mx-3 text-center">Admin Panel</h3>
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="user_management.html">User Management</a>
+        <a href="profile_management.html">Profile Management</a>
+        <a href="vacancies_management.html">Vacancies Management</a>
+        <a href="application_management.html">Applications Management</a>
+        <a href="event_management.html">Event Management</a>
+        <a href="event_register.html">Event Registration</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>All Vacancies</h2>
+            <button class="btn btn-view">Add Vacancy</button>
+        </div>
+
+        <div class="table-responsive d-none d-md-block">
+            <div class="table-container">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Company</th>
+                            <th>Posted Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PHP Web Development</td>
+                            <td>2 - 7 years | Not Disclosed | Location: Bengaluru | Job Type: Full Time</td>
+                            <td>Company A</td>
+                            <td>23/08/2024</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Scientist</td>
+                            <td>0 - 3 years | Not Disclosed | Location: Ahmedabad | Job Type: Remote</td>
+                            <td>Company B</td>
+                            <td>10/08/2024</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Additional rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card-container d-block d-md-none">
+            <div class="card">
+                <div class="card-title">PHP Web Development</div>
+                <div class="card-content">
+                    <p><strong>Description:</strong> 2 - 7 years | Not Disclosed | Location: Bengaluru | Job Type: Full Time</p>
+                    <p><strong>Company:</strong> Company A</p>
+                    <p><strong>Posted Date:</strong> 23/08/2024</p>
+                    <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Data Scientist</div>
+                <div class="card-content">
+                    <p><strong>Description:</strong> 0 - 3 years | Not Disclosed | Location: Ahmedabad | Job Type: Remote</p>
+                    <p><strong>Company:</strong> Company B</p>
+                    <p><strong>Posted Date:</strong> 10/08/2024</p>
+                    <button class="btn btn-sm btn-outline-primary">Edit</button>
+                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                </div>
+            </div>
+            <!-- Additional cards as needed -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

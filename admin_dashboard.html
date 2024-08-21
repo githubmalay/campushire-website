@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #4B0082;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #4b1e8c;
+        }
+
+        .navbar {
+            background-color: #4B0082;
+            color: white;
+            margin-left: 250px;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-item .nav-link {
+            color: white;
+            font-size: 18px;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            color: #4B0082;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            display: flex;
+            align-items: center;
+        }
+
+        .card-body i {
+            font-size: 40px;
+            color: #4B0082;
+            margin-right: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4B0082;
+        }
+
+        .card-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4B0082;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .navbar {
+                margin-left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .card-body {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+
+            .card-body i {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .card-title,
+            .card-text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-body {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card-body i {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .card-title,
+            .card-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h3 class="mx-3 text-center">Admin Panel</h3>
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="user_management.html">User Management</a>
+        <a href="profile_management.html">Profile Management</a>
+        <a href="vacancies_management.html">Vacancies Management</a>
+        <a href="application_management.html">Applications Management</a>
+        <a href="event_management.html">Event Management</a>
+        <a href="event_register.html">Event Registration</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <nav class="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user"></i> Admin</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h2>Dashboard</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>
+                            <h5 class="card-title">Total Students</h5>
+                            <p class="card-text">2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h5 class="card-title">Total Companies</h5>
+                            <p class="card-text">2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-id-card"></i>
+                        <div>
+                            <h5 class="card-title">Total Profiles</h5>
+                            <p class="card-text">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h5 class="card-title">Total Vacancies</h5>
+                            <p class="card-text">4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <h5 class="card-title">Total Events</h5>
+                            <p class="card-text">4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <h5 class="card-title">Applications</h5>
+                            <p class="card-text">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h5 class="card-title">Event Registrations</h5>
+                            <p class="card-text">2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

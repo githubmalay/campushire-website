@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Recruitment System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .search-bar {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .search-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+            width: 100%;
+            max-width: 110vh;
+            margin: 0 auto;
+        }
+
+        .search-card input {
+            width: calc(100% - 85px);
+            display: inline-block;
+            border-radius: 20px;
+            padding: 20px;
+
+        }
+
+        .search-card button {
+            width: 80px;
+            border-radius: 20px;
+        }
+
+        .featured-vacancies,
+        .upcoming-events {
+            margin: 50px 0;
+        }
+
+        .featured-vacancies h3,
+        .upcoming-events h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .vacancy-card,
+        .event-card {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .card-footer {
+            background-color: white;
+            border-top: none;
+        }
+
+        .card-footer a {
+            color: #007bff;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer h5 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .fab {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .footer .list-unstyled li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+
+            .about-text,
+            .about-image {
+                text-align: center;
+            }
+
+            .about-text {
+                order: 2;
+            }
+
+            .about-image {
+                order: 1;
+            }
+
+            .about-image img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .search-bar {
+            margin: 19px;
+            text-align: center;
+        }
+            .search-card {
+                padding: 21px;
+                border-radius: 5px;
+            }
+
+            .search-card input {
+                width: calc(100% - 85px);
+                display: inline-block;
+                border-radius: 20px;
+                padding: 20px;
+            }
+
+            .search-card button {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="home.html">Campushire</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="search-bar">
+        <div class="search-card">
+            <h2 class="text-primary">Find Your Dream Job</h2>
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" placeholder="Search for Vacancies and Events">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluied m-3 featured-vacancies">
+        <h3 class="mt-5 h1 text-primary">Featured Vacancies</h3>
+        <div class="row">
+            <div class="col-md-3 vacancy-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">PHP Web Development</h5>
+                        <hr>
+                        <p class="card-text">2 - 7 years | Not Disclosed<br> Office<br> Job Title: Coco Cola.<br>
+                            Location: Bengaluru.<br> Job Type: Full Time...</p>
+                        <small class="text-muted">Posted on: 2024-08-01</small><br>
+                        <p href="#">Travelopro</p>
+                        <a href="detail.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 vacancy-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Web Development</h5>
+                        <hr>
+                        <p class="card-text">0 - 5 years | Not Disclosed<br> Remote<br> Job Title: Personal Cook.<br>
+                            Location: Ahmedabad.<br> Job Type: Full Time...</p>
+                        <small class="text-muted">Posted on: 2024-07-31</small><br>
+                        <p href="#">Personal Cook</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 vacancy-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Frontend Developer</h5>
+                        <hr>
+                        <p class="card-text">3-5 Yrs | Not disclosed<br> Remote Internship<br> Location: Mysuru<br> Job
+                            Type: Part Time<br> Skills: HTML, CSS, JavaScript, Bootstrap...</p>
+                        <small class="text-muted">Posted on: 2024-07-28</small><br>
+                        <p href="#">Cliff Solution</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 vacancy-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Data Scientist</h5>
+                        <hr>
+                        <p class="card-text">0 - 3 years | Not Disclosed<br> Remote<br> Job Title: Data Scientist<br>
+                            Location: Ahmedabad<br> Job Type: Full Time...</p>
+                        <small class="text-muted">Posted on: 2024-07-17</small><br>
+                        <p href="#">Swiggy</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluied m-3 upcoming-events">
+        <h3 class="h1 mt-4 text-primary">Upcoming Events</h3>
+        <div class="row">
+            <div class="col-md-3 event-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Tech Talk Series</h5>
+                        <hr>
+                        <p class="card-text">Attend our Tech Talk series to learn about the latest trends in technology
+                            from industry experts.</p>
+                        <p class="card-text"><small class="text-muted">Date: 2024-08-03</small><br>
+                        <p class="text-muted">Location: Room 305, IT Building</p>
+                        </p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 event-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Resume Building</h5>
+                        <hr>
+                        <p class="card-text">Enhance your resume with tips and tricks from our career services team.
+                            Bring your current resume for a review.</p>
+                        <p class="card-text"><small class="text-muted">Date: 2024-08-06</small><br>
+                        <p class="text-muted">Location: Career Services Office</p>
+                        </p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 event-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Job Fair 2024</h5>
+                        <hr>
+                        <p class="card-text">Join us for a day of networking with top companies. Explore various job
+                            opportunities and meet recruiters.</p>
+                        <p class="card-text"><small class="text-muted">Date: 2024-08-15</small><br>
+                        <p class="text-muted">Location: University Auditorium</p>
+                        </p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 event-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Tech Conference 2024</h5>
+                        <hr>
+                        <p class="card-text">Join us for a day of insightful talks and networking with industry leaders
+                            in technology.</p>
+                        <p class="card-text"><small class="text-muted">Date: 2024-08-23</small><br>
+                        <p class="text-muted">Location: Nathiba Hall</p>
+                        </p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Register
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register for Event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <!-- <div class="form-group">
+                            <label for="eventTitle">Event Title</label>
+                            <input type="text" class="form-control" id="eventTitle" placeholder="Enter Event Title">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobile" placeholder="Enter Your Mobile Number">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="home.html" type="submit" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="footer">
+        <p>&copy; 2024 Campus Recruitment System. All rights reserved.</p>
+    </div> -->
+    <div class="footer">
+        <p class="mb-0 text-center">&copy; 2024 Campushire. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Registered Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #4B0082;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #4b1e8c;
+        }
+
+        .navbar {
+            background-color: #4B0082;
+            color: white;
+            margin-left: 250px;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-item .nav-link {
+            color: white;
+            font-size: 18px;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #F2F2F2;
+        }
+
+        /* Section Styling */
+        .section-title {
+            color: #4B0082;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #4B0082;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        .btn-delete {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .btn-delete:hover {
+            background-color: #ff1a1a;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .navbar {
+                margin-left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .navbar .nav-item .nav-link {
+                font-size: 16px;
+            }
+
+            .table th, .table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .btn-delete {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .table-responsive {
+                overflow-x: auto;
+            }
+
+            .table thead {
+                display: none;
+            }
+
+            .table tr {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .table td {
+                display: block;
+                text-align: right;
+                font-size: 14px;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            .btn-delete {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h3 class="mx-3 text-center">Admin Panel</h3>
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="user_management.html">User Management</a>
+        <a href="profile_management.html">Profile Management</a>
+        <a href="vacancies_management.html">Vacancies Management</a>
+        <a href="application_management.html">Applications Management</a>
+        <a href="event_management.html">Event Management</a>
+        <a href="event_register.html">Event Registration</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+    <nav class="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user"></i> Admin</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h2 class="section-title">Registered Users</h2>
+
+        <!-- Students Section -->
+        <div class="card">
+            <div class="card-header">
+                Students
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>user_id</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="user_id">2</td>
+                                <td data-label="Username">meet ladola</td>
+                                <td data-label="Email">meetladola@gmail.com</td>
+                                <td data-label="Contact">8220052252</td>
+                                <td data-label="Actions"><button class="btn btn-delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="user_id">14</td>
+                                <td data-label="Username">meet</td>
+                                <td data-label="Email">meet@gmail.com</td>
+                                <td data-label="Contact">1254100000</td>
+                                <td data-label="Actions"><button class="btn btn-delete">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Companies Section -->
+        <div class="card">
+            <div class="card-header">
+                Companies
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Company Name</th>
+                                <th>Approved</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Username">company4</td>
+                                <td data-label="Email">company4@gmail.com</td>
+                                <td data-label="Contact">1254100000</td>
+                                <td data-label="Company Name">company 4</td>
+                                <td data-label="Approved">Yes</td>
+                                <td data-label="Actions"><button class="btn btn-delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Username">company</td>
+                                <td data-label="Email">company@gmail.com</td>
+                                <td data-label="Contact">9425586658</td>
+                                <td data-label="Company Name">company</td>
+                                <td data-label="Approved">Yes</td>
+                                <td data-label="Actions"><button class="btn btn-delete">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
